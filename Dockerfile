@@ -1,7 +1,10 @@
 FROM python:3-alpine
 
-LABEL maintainer='<author>'
-LABEL version='0.0.0-dev.0-build.0'
+ARG VERSION=0.0.0-dev.0-build.0
+ARG MAINTAINER='Shengdun Hua'
+
+LABEL maintainer="${MAINTAINER}"
+LABEL version="${VERSION}"
 
 ADD . /code
 WORKDIR /code
